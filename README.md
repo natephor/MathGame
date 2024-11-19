@@ -15,4 +15,4 @@ A console app I made while attending [C# Academy](https://www.thecsharpacademy.c
 ### Extra
 
 - [x] Try to implement levels of difficulty.
-- [ ] Create a 'Random Game' option where the players will be presented with questions from random operations.
+- [x] Create a 'Random Game' option where the players will be presented with questions from random operations.

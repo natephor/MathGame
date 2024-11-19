@@ -32,31 +32,32 @@ public class Game
             };
         }
         else
-        {
             _difficulty = Difficulty.Normal;
-        }
     }
 
     private bool PlayOneRound()
     {
         string? choice;
         int selection;
+        var random = new Random();
         do
         {
             UserInterface.DisplayMenu();
             choice = Console.ReadLine();
-        } while (!int.TryParse(choice, out selection) || selection is > 6 or < 1);
+        } while (!int.TryParse(choice, out selection) || selection is > 7 or < 1);
 
         switch (selection)
         {
-            case 6:
-                return false;
             case 5:
+                selection = random.Next(1, 5);
+                break;
+            case 6:
                 UserInterface.DisplayHistory(_gameRounds);
                 return true;
+            case 7:
+                return false;
         }
 
-        var random = new Random();
         var maxValue = (int)_difficulty;
         var firstNumber = random.Next(0, maxValue);
         var secondNumber = random.Next(0, maxValue);
@@ -110,7 +111,7 @@ internal enum Operation
     Addition = 1,
     Subtraction,
     Multiplication,
-    Division
+    Division,
 }
 
 internal enum Difficulty

@@ -21,8 +21,9 @@ public static class UserInterface
         Console.WriteLine("2. Subtraction");
         Console.WriteLine("3. Multiplication");
         Console.WriteLine("4. Division");
-        Console.WriteLine("5. Show History");
-        Console.WriteLine("6. End Game");
+        Console.WriteLine("5. Random Operation");
+        Console.WriteLine("6. Show History");
+        Console.WriteLine("7. End Game");
         Console.Write("Select an option: ");
     }
 
