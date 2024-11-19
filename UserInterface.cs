@@ -41,8 +41,21 @@ public static class UserInterface
 
     public static void DisplayRoundResult(string question, int result, int answer)
     {
-        Console.Write(answer == result ? "That was correct!" : "That was incorrect!");
-        Console.WriteLine($" {question} = {result}");
+        Console.ForegroundColor = ConsoleColor.Black;
+        if (answer == result)
+        {
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.Write("That was correct!");
+        }
+        else
+        {
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Write("That was incorrect!");
+        }
+        
+        Console.ResetColor();
+        Console.WriteLine();
+        Console.WriteLine($"The answer was: {question} = {result}");
     }
 
     public static void EndMessage()
